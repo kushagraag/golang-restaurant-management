@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "749ad37d-8b3c-4121-86c5-942a8876ae8b",
+		"name": "go restaurant management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19884599"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"testuser2\",\r\n    \"last_name\": \"lasttest\",\r\n    \"password\": \"12345678\",\r\n    \"email\": \"test2@test.com\",\r\n    \"avatar\": \"avs\",\r\n    \"phone\": \"00099d9888\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/users/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"password\":\"12345678\",\r\n\"email\":\"test@test.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8000/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InRlc3RAdGVzdC5jb20iLCJGaXJzdF9uYW1lIjoidGVzdCIsIkxhc3RfbmFtZSI6Imxhc3R0ZXN0IiwiVWlkIjoiNjViOGE0OWFlYjZmOTk1N2Q5MmQxMWQ2IiwiZXhwIjoxNzA2Njg1OTc4fQ.Hvm_Jf6UaCMtoctR4rDEv_5nwCPVLizjTMvHnVB96uE",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/users/",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						""
+					]
+				},
+				"description": "no token needed"
+			},
+			"response": []
+		},
+		{
+			"name": "get user by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJFbWFpbCI6InRlc3RAdGVzdC5jb20iLCJGaXJzdF9uYW1lIjoidGVzdCIsIkxhc3RfbmFtZSI6Imxhc3R0ZXN0IiwiVWlkIjoiNjViOGE0OWFlYjZmOTk1N2Q5MmQxMWQ2IiwiZXhwIjoxNzA2Njg1OTc4fQ.Hvm_Jf6UaCMtoctR4rDEv_5nwCPVLizjTMvHnVB96uE",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/users/65b912822669c15031f3c25c",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"65b912822669c15031f3c25c"
+					]
+				},
+				"description": "get user id from all users, no token needed"
+			},
+			"response": []
+		}
+	]
+}
